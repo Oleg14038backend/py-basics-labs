@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ops-cli"
+version = "0.1.0"
+description = "Учебный боевой CLI проект (Python fundamentals)"
+requires-python = ">=3.10"
+
+[project.scripts]
+ops-cli = "ops_cli.main:main"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+select = ["E", "F", "B", "I"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+
+[tool.setuptools]
+packages = ["ops_cli"]
